@@ -34,12 +34,40 @@ char tempo_site(int telescope_id) /*includefile*/
   case 10:
     return('z'); /*SRT*/
     break;
-  case 64:
-    return('m'); /*MeerKAT*/
+  case 15:
+    return('j'); /*NRARAO*/
     break;
-  case 65:
-    return('k'); /*KAT-7*/
+  case 16:
+    return('k'); /*Stockert 25m*/
     break;
+  case 17:
+    return('l'); /*K5SO*/
+    break;
+  case 18:
+    return('k'); /*Stockert 10m*/
+    break;
+  case 19:
+    return('m'); /*IAR A1*/
+    break;
+//  case 20:
+//    return('n'); /*Dwingeloo*/
+//    break;
+  case 21:
+    return('o'); /*DL0SHF*/
+    break;
+//  case 22:
+//    return('p'); /*Sao Giao*/
+//    break;
+  case 23:
+    return('n'); /*IAR A2*/
+    break;
+  case 24:
+    return('p'); /*DSA3*/
+    break;
+  case 25:
+    return('q'); /*CLTC*/
+    break;
+
   default:
     return('?'); /*unknown*/
     /*error_message("tempo_site: unknown telescope!");*/
@@ -83,18 +111,44 @@ char *telescope_name (int telescope_id) /*includefile*/
     break;
   case 10: 
     strcpy(string,"SRT");
-    break;
-  case 64:
-    strcpy(string,"MeerKAT");
-    break;
-  case 65:
-    strcpy(string,"KAT-7");
-    break;
-  case 82:
-    strcpy(string,"eMerlin");
-    break;
- 
-  default: 
+	break;
+  case 11: 
+    strcpy(string,"LOFAR");
+	break;  default:
+  case 15: 
+    strcpy(string,"NRARAO");
+	break;
+  case 16: 
+    strcpy(string,"Stockert 25m");
+	break;
+  case 17: 
+    strcpy(string,"K5SO");
+	break; 
+  case 18: 
+    strcpy(string,"Stockert 10m");
+	break;
+  case 19: 
+    strcpy(string,"IAR A1");
+	break;
+  case 20: 
+    strcpy(string,"Dwingeloo");
+	break;
+  case 21: 
+    strcpy(string,"DL0SHF");
+	break;
+  case 22: 
+    strcpy(string,"Sao Giao");
+	break;
+  case 23:
+    strcpy(string,"IAR A2");
+        break;
+  case 24:
+    strcpy(string,"DSA3");
+        break;
+  case 25:
+    strcpy(string,"CLTC");
+        break;
+
     strcpy(string,"???????"); 
     break;
   }
@@ -131,7 +185,7 @@ char *backend_name (int machine_id) /*includefile*/
     strcpy(string,"GMRTFB");
     break;
   case 8:
-    strcpy(string,"PULSAR2000");
+    strcpy(string,"PFFTS");
     break;
   case 9:
     strcpy(string,"PARSPEC");
@@ -142,20 +196,20 @@ char *backend_name (int machine_id) /*includefile*/
   case 14:
     strcpy(string,"GMRTNEW");
     break;
-  case 64:
-    strcpy(string,"KAT");
+  case 20:
+    strcpy(string,"RTL_SDR");
     break;
-  case 65:
-    strcpy(string,"KAT-DC2");
+  case 21:
+    strcpy(string,"USRP");
     break;
-  case 82:
-    strcpy(string,"loft-e");
+  case 22:
+    strcpy(string,"Hack-RF");
     break;
-  case 83:
-    strcpy(string,"ROACH");
+  case 23:
+    strcpy(string,"RTL_Filterbank");
     break;
-  case 88:
-    strcpy(string,"AT-PAF");
+  case 24:
+    strcpy(string,"K5SO_Filterbank");
     break;
   default:
     strcpy(string,"?????");
