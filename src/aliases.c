@@ -58,7 +58,7 @@ char tempo_site(int telescope_id) /*includefile*/
 //  case 22:
 //    return('p'); /*Sao Giao*/
 //    break;
-  case 23:
+  case 20:
     return('n'); /*IAR A2*/
     break;
   case 24:
@@ -128,10 +128,7 @@ char *telescope_name (int telescope_id) /*includefile*/
     strcpy(string,"Stockert 10m");
 	break;
   case 19: 
-    strcpy(string,"IAR A1");
-	break;
-  case 20: 
-    strcpy(string,"Dwingeloo");
+    strcpy(string,"IAR1");
 	break;
   case 21: 
     strcpy(string,"DL0SHF");
@@ -139,8 +136,8 @@ char *telescope_name (int telescope_id) /*includefile*/
   case 22: 
     strcpy(string,"Sao Giao");
 	break;
-  case 23:
-    strcpy(string,"IAR A2");
+  case 20:
+    strcpy(string,"IAR2");
         break;
   case 24:
     strcpy(string,"DSA3");
@@ -209,8 +206,11 @@ char *backend_name (int machine_id) /*includefile*/
     strcpy(string,"RTL_Filterbank");
     break;
   case 24:
-    strcpy(string,"K5SO_Filterbank");
+    strcpy(string,"IAR-ROACH-v1");
     break;
+  case 25:
+    strcpy(string,"IAR-SNAP-v1");
+    break;		  
   default:
     strcpy(string,"?????");
     break;
