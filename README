@@ -44,3 +44,10 @@ If you need special fortran compiler flags...
 e.g.
 FFFLAGS=-ffixed-line-length-none
 
+----- IAR ---
+#Now build sigproc
+cd $PULSARSOFTWARE_DIR/sigproc-stockert
+./bootstrap
+./configure F77=gfortran --prefix=$PULSARSOFTWARE_DIR CPPFLAGS=-I$PULSARSOFTWARE_DIR/include LDFLAGS=-L$PULSARSOFTWARE_DIR/lib
+make
+make install
