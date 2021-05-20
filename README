@@ -46,6 +46,7 @@ FFFLAGS=-ffixed-line-length-none
 
 ----- IAR ---
 #Now build sigproc
+PULSARSOFTWARE_DIR=/opt/pulsar/
 cd $PULSARSOFTWARE_DIR/sigproc-stockert
 ./bootstrap
 ./configure F77=gfortran --prefix=$PULSARSOFTWARE_DIR CPPFLAGS=-I$PULSARSOFTWARE_DIR/include LDFLAGS=-L$PULSARSOFTWARE_DIR/lib
