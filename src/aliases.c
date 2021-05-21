@@ -52,14 +52,14 @@ char tempo_site(int telescope_id) /*includefile*/
 //  case 20:
 //    return('n'); /*Dwingeloo*/
 //    break;
-  case 21:
-    return('o'); /*DL0SHF*/
-    break;
+//  case 21:
+//    return('o'); /*DL0SHF*/
+//    break;
 //  case 22:
 //    return('p'); /*Sao Giao*/
 //    break;
   case 20:
-    return('n'); /*IAR A2*/
+    return('o'); /*IAR A2*/
     break;
   case 24:
     return('p'); /*DSA3*/
