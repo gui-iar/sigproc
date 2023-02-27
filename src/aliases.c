@@ -61,6 +61,12 @@ char tempo_site(int telescope_id) /*includefile*/
   case 20:
     return('o'); /*IAR A2*/
     break;
+  case 21:
+    return('r'); /*IAR A1 Roach */
+    break;
+  case 22:
+    return('s'); /*IAR A2* Roach */
+    break;
   case 24:
     return('p'); /*DSA3*/
     break;
@@ -130,14 +136,14 @@ char *telescope_name (int telescope_id) /*includefile*/
   case 19: 
     strcpy(string,"IAR1");
 	break;
-  case 21: 
-    strcpy(string,"DL0SHF");
-	break;
-  case 22: 
-    strcpy(string,"Sao Giao");
-	break;
-  case 20:
+  case 20: 
     strcpy(string,"IAR2");
+	break;
+  case 21: 
+    strcpy(string,"IAR1R");
+	break;
+  case 22:
+    strcpy(string,"IAR2R");
         break;
   case 24:
     strcpy(string,"DSA3");
