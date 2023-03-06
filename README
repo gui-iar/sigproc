@@ -66,6 +66,8 @@ tempo2:
 
 /T2runtime/observatory/Tempo2:
 
+aliases  observatories.dat
+
 PRESTO:
 
 telescope_to_tempocode() in misc_utils.c
